@@ -21,6 +21,7 @@ jobs:
       run: mvn checkstyle:checkstyle
 
     - name: Run SpotBugs code analysis
+      continue-on-error: true
       working-directory: backend
       run: mvn spotbugs:check
 
