@@ -16,6 +16,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Print Checkstyle config to console
+      working-directory: backend
+      run: cat checkstyle.xml
+
     - name: Run Checkstyle code analysis
       working-directory: backend
       run: mvn checkstyle:checkstyle
